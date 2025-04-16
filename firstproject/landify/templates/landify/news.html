@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>News</title>
+    <link rel="stylesheet" href="{% static 'landify/news.css' %}" />
+</head>
+<body>
+    {% include 'includes/nav.html' %}
+    
+    <div class="selection">
+        <div class="btn">
+            <a href="{% url 'seller' %}">Seller</a>
+        </div>
+    </div>
+    <div class="user-responses">
+        {% for response in user_responses %}
+            <div class="user-response">
+                <p><strong>Location:</strong> {{ response.location_text }}</p>
+                <p><strong>State:</strong> {{ response.get_state_display }}</p>
+                <p><strong>District:</strong> {{ response.district }}</p>
+                <p><strong>Pincode:</strong> {{ response.pincode }}</p>
+                <p><strong>Rate in (Sq.Ft):</strong> {{ response.rate }}</p>
+                <p><strong>Way:</strong> {{ response.way|yesno:"Yes,No" }}</p>
+                <p><strong>Area in (Sq.Ft):</strong> {{ response.area }}</p>
+                <p><strong>Picture:</strong><br><br><img src="{{ response.picture.url }}" alt="User Picture" width="300"></p>
+            </div>
+        {% empty %}
+            <p>No user responses available.</p>
+        {% endfor %}
+    </div>
+    {% include 'includes/footer.html' %}
+</body>
+</html>

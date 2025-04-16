@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(150deg, black 60%, #4b0082);
+    font-family: 'Playfair Display', serif;
+    color: whitesmoke;
+    height: 100%vh;
+}
+
+.flex_one,.main_log {
+    height: 100%;
+    width: 100%;
+    margin-top:20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form_container,.sub_log{
+    width: 25%;
+    padding: 50px;
+    height: 100%;
+}
+
+.head_reg,.log_head{
+    color: #4b0082;
+    text-align: center;
+}
+
+.form_container label,.log_label {
+    display: block;
+    font-weight: bold;
+}
+
+.red_high,.log_error{
+    color: red;
+    margin-top: 0;
+}
+.form_container input,.log_input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.form_container button,.log_button {
+    width: 60%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.form_container button:hover ,.log_button:hover{
+    background-color: #45a049;
+}
+
+.last_link,.log_log{
+    width: 100%;
+    margin-bottom: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.last_link a,.log_log a{
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: 600;
+}
+
+.last_link a:hover,.log_log a:hover{
+    font-size: 20px;
+    color: #45a049;
+    font-weight: 900;
+}
+
+.log_head{
+    margin-top: 100px;
+}
+
+.log_label{
+    margin-bottom: 20px;
+}
+
+.log_log{
+    margin-bottom: 200px;
+}
+
+.log_error{
+    margin-top: 40px;
+}
+

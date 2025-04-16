@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Services | Landify</title>
+  <link rel="stylesheet" href="{% static 'landify/services.css' %}" />
+</head>
+<body>
+
+  {% include 'includes/nav.html' %}
+
+  <section class="services-section">
+    <div class="services-container">
+      <h1>Our Services</h1>
+      <p class="intro">At <strong>Landify</strong>, we offer trusted and streamlined services to make land transactions simpler, safer, and more transparent.</p>
+
+      <div class="service-cards">
+
+        <div class="card">
+          <h3>Land Listing</h3>
+          <p>Post your land for sale with detailed information, images, pricing, and location. Reach verified buyers instantly.</p>
+        </div>
+
+        <div class="card">
+          <h3>Land Search</h3>
+          <p>Browse thousands of land listings by state, district, pincode, or rate. Use smart filters to find exactly what you need.</p>
+        </div>
+
+        <div class="card">
+          <h3>Verified Leads</h3>
+          <p>Get access to verified buyers and sellers to ensure you connect with genuine parties and avoid time-wasters.</p>
+        </div>
+
+        <div class="card">
+          <h3>Location Mapping</h3>
+          <p>Every land listed is connected with Google Maps to help you view the property location and surroundings in real-time.</p>
+        </div>
+
+        <div class="card">
+          <h3>Consultation Support</h3>
+          <p>Need help pricing or evaluating a plot? We offer land consultant assistance to guide you through the process.</p>
+        </div>
+
+        <div class="card">
+          <h3>Secure Data Storage</h3>
+          <p>Your land details, images, and personal data are securely stored and handled with privacy and care.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  {% include 'includes/footer.html' %}
+
+</body>
+</html>

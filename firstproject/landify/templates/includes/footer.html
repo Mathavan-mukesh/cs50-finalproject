@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>footer</title>
+    <link rel="stylesheet" href="{% static 'landify/footer.css' %}">
+</head>
+<body>
+    <footer class="site-footer">
+        <div class="footer-container">
+          <div class="footer-left">
+            <h3>Landify</h3>
+            <p>&copy; 2025 Landify. All rights reserved.</p>
+            <p>2/44, School Street, poigai-627856</p>
+          </div>
+          <div class="footer-links">
+            <a href="{% url 'policy' %}">Privacy Policy</a>
+            <a href="{% url 'terms' %}">Terms of Service</a>
+            <a href="{% url 'contact' %}">Contact</a>
+          </div>
+          <div class="footer-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15761.028447796089!2d77.39573754514181!3d9.040295056342247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b069cc8b1cd5b67%3A0x204e8fa36df01935!2sPoygai%2C%20Tamil%20Nadu%20627751!5e0!3m2!1sen!2sin!4v1744482877866!5m2!1sen!2sin"
+              width="100%" height="200"
+              style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>

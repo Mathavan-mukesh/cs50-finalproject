@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Landify</title>
+  <link rel="stylesheet" href="{% static 'landify/about.css' %}" />
+</head>
+<body>
+
+  {% include 'includes/nav.html' %}
+
+  <section class="about-section">
+    <div class="about-container">
+      <h1>About Landify</h1>
+      <p class="intro">
+        <strong>Landify</strong> is your trusted digital platform designed to make land transactions simple, transparent, and accessible for everyone.
+        Whether you're looking to buy, sell, or explore lands across different regions, Landify is here to connect you to the right people with the right property.
+      </p>
+
+      <h2>Our Mission</h2>
+      <p>
+        At Landify, our mission is to digitize and simplify the land search and listing process. We aim to bring transparency, security, and ease to real estate dealings by connecting verified buyers and sellers directly on one unified platform.
+      </p>
+
+      <h2>Why Choose Landify?</h2>
+      <ul>
+        <li>✔ Verified land listings and genuine user connections</li>
+        <li>✔ Google Maps integration for every land post</li>
+        <li>✔ Easy and secure data handling</li>
+        <li>✔ Professional consultation and support</li>
+        <li>✔ Fast, mobile-friendly, and easy-to-use platform</li>
+      </ul>
+
+      <h2>Who We Serve</h2>
+      <p>
+        Whether you're a first-time buyer, a seasoned investor, a farmer, or a real estate agent — Landify is built for you. We serve clients from urban and rural areas across multiple Indian states.
+      </p>
+    </div>
+  </section>
+
+  {% include 'includes/footer.html' %}
+
+</body>
+</html>

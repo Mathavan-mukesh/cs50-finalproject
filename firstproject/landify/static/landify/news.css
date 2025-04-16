@@ -1,0 +1,90 @@
+/* General Reset and Layout */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #f9f9f9, #e0f7fa);
+    color: #333;
+}
+
+nav {
+    background-color: #006064;
+    padding: 10px 20px;
+    color: white;
+}
+
+.selection {
+    display: flex;
+    padding: 20px;
+    margin-top: 90px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.btn a {
+    background-color: #00796b;
+    color: white;
+    padding: 18px 40px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn a:hover {
+    background-color: #004d40;
+}
+
+/* Main container */
+.user-responses {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px;
+    justify-content: center;
+}
+
+/* Individual Card Style */
+.user-response {
+    background-color: white;
+    border: 2px solid #b2ebf2;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    width: 350px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.user-response:hover {
+    transform: scale(1.03);
+}
+
+/* Text Formatting */
+.user-response p {
+    margin: 8px 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.user-response strong {
+    color: #00796b;
+}
+
+/* Image Style */
+.user-response img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #80deea;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .user-response {
+        width: 90%;
+    }
+
+    .selection {
+        justify-content: center;
+    }
+}

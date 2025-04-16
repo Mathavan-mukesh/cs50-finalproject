@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'landify/style.css' %}">
+</head>
+
+<body>
+    <div class="main_log">
+        <div class="sub_log">
+            <h2 class="log_head">Login Page</h2>
+
+            <form method="post">
+                {% csrf_token %}
+                <label for="username" class="log_label">Username:</label>
+                <input class="log_input" type="text" name="username" required><br><br>
+
+                <label for="password" class="log_label">Password:</label>
+                <input class="log_input" type="password" name="password" required><br><br>
+
+                <button class="log_button" type="submit">Login</button>
+            </form>
+
+            {% if messages %}
+            {% for message in messages %}
+            <p class="log_error">
+                {{ message }}
+            </p>
+            {% endfor %}
+            {% endif %}
+        </div>
+
+    </div>
+
+    <p class="log_log">Don't have an account? 
+        <a href="{% url 'register' %}">Register here</a>
+    </p>
+</body>
+
+</html>

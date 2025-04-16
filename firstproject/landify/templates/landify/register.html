@@ -1,0 +1,34 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" href="{% static 'landify/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="flex_one">
+        <form method="post" class="form_container">
+            <h1 class="head_reg">Registration</h1>
+            {% csrf_token %}
+            {% for field in form %}
+                <p class="label_register">
+                    {{ field.label_tag }}<br>
+                    {{ field }}
+                    {% if field.errors %}
+                        <div class="red_high">{{ field.errors }}</div>
+                    {% endif %}
+                </p>
+            {% endfor %}
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+    <p class="last_link">Already have an account? 
+        <a href="{% url 'login' %}">Login Here</a>
+    </p>
+    
+</body>
+</html>

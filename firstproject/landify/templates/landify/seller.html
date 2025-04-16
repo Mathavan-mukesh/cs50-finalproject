@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>seller</title>
+    <link rel="stylesheet" href="{% static 'landify/seller.css' %}">
+</head>
+<body>
+    {% include 'includes/nav.html' %}
+    <form class="home" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        {{ form.location_text.label_tag }} {{ form.location_text }}
+
+        <label for="id_state">State:</label>
+        {{ form.state }}
+
+        <label for="id_district">District:</label>
+        <select id="id_district" name="district">
+            <option value="">Select District</option>
+        </select>
+
+        {{ form.pincode.label_tag }} {{ form.pincode }}
+        {{ form.rate.label_tag }} {{ form.rate }}
+        {{ form.way.label_tag }} {{ form.way }}
+        {{ form.picture.label_tag }} {{ form.picture }}
+        {{ form.phone_number.label_tag}} {{form.phone_number}}
+        {{ form.area.label_tag}} {{form.area}} 
+
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    {% include 'includes/footer.html' %}
+    <script>
+        const districtsByState = {
+            "TN": [
+                "Ariyalur", "Chengalpattu", "Chennai", "Coimbatore", "Cuddalore", "Dharmapuri",
+                "Dindigul", "Erode", "Kallakurichi", "Kanchipuram", "Kanyakumari", "Karur", "Krishnagiri",
+                "Madurai", "Mayiladuthurai", "Nagapattinam", "Namakkal", "Nilgiris", "Perambalur",
+                "Pudukkottai", "Ramanathapuram", "Ranipet", "Salem", "Sivagangai", "Tenkasi", "Thanjavur",
+                "Theni", "Thoothukudi", "Tiruchirappalli", "Tirunelveli", "Tirupathur", "Tiruppur",
+                "Tiruvallur", "Tiruvannamalai", "Tiruvarur", "Vellore", "Viluppuram", "Virudhunagar"
+            ],
+            "KA": ["Bengaluru", "Mysuru", "Hubli", "Mangalore"],
+            "MH": ["Mumbai", "Pune", "Nagpur"],
+            "DL": ["Central Delhi", "South Delhi"],
+            "GJ": ["Ahmedabad", "Surat", "Rajkot"]
+        };
+
+        document.getElementById("id_state").addEventListener("change", function () {
+            const state = this.value;
+            const districtSelect = document.getElementById("id_district");
+            districtSelect.innerHTML = '<option value="">Select District</option>';
+
+            if (districtsByState[state]) {
+                districtsByState[state].forEach(function (district) {
+                    const option = document.createElement("option");
+                    option.value = district;
+                    option.textContent = district;
+                    districtSelect.appendChild(option);
+                });
+            }
+        });
+
+        window.addEventListener("DOMContentLoaded", () => {
+            const state = document.getElementById("id_state").value;
+            if (state) {
+                const event = new Event("change");
+                document.getElementById("id_state").dispatchEvent(event);
+            }
+        });
+    </script>
+
+</body>
+</html>

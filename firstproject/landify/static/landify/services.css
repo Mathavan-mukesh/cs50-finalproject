@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #1a1a1a;
+    color: #f1f1f1;
+  }
+  
+  .services-section {
+    margin-top: 90px;
+    padding: 60px 20px;
+    background-color: #1e1e2f;
+  }
+  
+  .services-container {
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .services-container h1 {
+    color: #00bcd4;
+    font-size: 2.8em;
+    margin-bottom: 20px;
+  }
+  
+  .intro {
+    font-size: 1.1em;
+    color: #ccc;
+    margin-bottom: 40px;
+    line-height: 1.6;
+  }
+  
+  .service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+  }
+  
+  .card {
+    background-color: #1a1a1a;
+    padding: 25px;
+    border-radius: 12px;
+    width: 300px;
+    text-align: left;
+    border: 1px solid #bbb;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    border-color: #00bcd4;
+  }
+  
+  .card h3 {
+    color: #00bcd4;
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    color: #ccc;
+    font-size: 0.95em;
+    line-height: 1.6;
+  }
+  
